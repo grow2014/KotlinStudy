@@ -33,4 +33,5 @@ dependencies {
         exclude group: 'com.android.support'
     })
     kapt 'com.jakewharton:butterknife-compiler:8.5.1' // I'm using kapt because the project using kotlin & java
+    compile 'com.orhanobut:logger:2.1.1'
 }

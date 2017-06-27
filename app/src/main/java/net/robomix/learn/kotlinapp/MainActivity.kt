@@ -1,16 +1,19 @@
 package net.robomix.learn.kotlinapp
 
+import android.app.DialogFragment
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.TextView
 import butterknife.bindOptionalView
 import net.robomix.learn.kotlinapp.models.Employee
 import net.robomix.learn.kotlinapp.models.Person
+import java.util.ArrayList
 
 class MainActivity : AppCompatActivity() {
 
     val tvTitle: TextView? by bindOptionalView(R.id.tvTitle) // val -> unchangeable
     val tvOtherTitle: TextView? by bindOptionalView(R.id.tvOtherTitle)
+    var dialogsList: ArrayList<DialogFragment> = ArrayList()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

@@ -1,5 +1,7 @@
 package net.robomix.learn.kotlinapp.models
 
+import com.orhanobut.logger.Logger
+
 
 /**
  *
@@ -25,5 +27,12 @@ open class Person(private val name: String, private val age: Int) {
 
     constructor(name: String, age: Int, email: String?) : this(name, age) {
         this.email = email
+    }
+}
+
+class Employee(name: String, age: Int, var company: String?) : Person(name, age) {
+
+    fun testLog() {
+        Logger.i("my information. Company = " + company)
     }
 }
